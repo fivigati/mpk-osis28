@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pengumuman Seleksi MPK & OSIS SMP Negeri 28 Malang</title>
+    <title>Pengumuman Hasil Tes & Wawancara Seleksi OSIS SMP Negeri 28 Malang</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Plus Jakarta Sans, Poppins, Quicksand -->
@@ -75,108 +75,85 @@
 
     <script>
         const mpkData = [
-            { no: 1, nama: "HARDIAN MAULANA QORY", jabatan: "Ketua" },
-            { no: 2, nama: "SALSABILLA AULIA NURDIANA", jabatan: "Wakil" },
-            { no: 3, nama: "ASYIFA FEBRIANA PUTRI", jabatan: "Sekretaris" },
-            { no: 4, nama: "YOSUA RAVELLIUS PAKPAHAN", jabatan: "Bendahara" },
-            { no: 5, nama: "GIBRAN ARYA FRANSISCO", jabatan: "Anggota" },
-            { no: 6, nama: "REIHAN RIZQI RAMADHAN", jabatan: "Anggota" },
-            { no: 7, nama: "RUBBY AVIZA NICKTA", jabatan: "Anggota" },
-            { no: 8, nama: "ANGGELINA OKTAVIA", jabatan: "Anggota" },
-            { no: 9, nama: "DISMA PUTRIOKTAVIA", jabatan: "Anggota" },
-            { no: 10, nama: "AZALIA PUTRI", jabatan: "Anggota" },
-            { no: 11, nama: "SITI HUDAIFA", jabatan: "Anggota" }
+            { no: 1, nama: "SITI HUDAIFA", status: "LOLOS" },
+            { no: 2, nama: "A. FAUZAN", status: "TIDAK LOLOS" },
+            { no: 3, nama: "GIBRAN ARYA", status: "LOLOS" },
+            { no: 4, nama: "SALSABILLA AULIA", status: "LOLOS" },
+            { no: 5, nama: "ASYIFA FEBRIANA", status: "LOLOS" },
+            { no: 6, nama: "DAFFA RIZKI", status: "TIDAK LOLOS" },
+            { no: 7, nama: "NAURA SYARANIA", status: "TIDAK LOLOS" },
+            { no: 8, nama: "YOSUA RAVELLIUS", status: "LOLOS" },
+            { no: 9, nama: "ANGGELINA OKTAVIA", status: "LOLOS" },
+            { no: 10, nama: "YUAN SAYYIDAH", status: "TIDAK LOLOS" },
+            { no: 11, nama: "DISMA PUTRI", status: "LOLOS" },
+            { no: 12, nama: "HARDIAN MAULANA", status: "LOLOS" },
+            { no: 13, nama: "RUBBY AVIZA", status: "LOLOS" },
+            { no: 14, nama: "AZ ZAHRA DIVA", status: "TIDAK LOLOS" },
+            { no: 15, nama: "AZIZAH ABDILLAH", status: "TIDAK LOLOS" },
+            { no: 16, nama: "NADHIRA PRAMUDYA", status: "TIDAK LOLOS" },
+            { no: 17, nama: "AZALIA PUTRI", status: "LOLOS" },
+            { no: 18, nama: "REIHAN RIZQI", status: "LOLOS" }
         ];
 
         const osisData = [
-            { no: 1, nama: "AHMAD RAIZEL AL GHIFARI", kelas: "7A", status: "TIDAK LOLOS" },
-            { no: 2, nama: "ALYA RAHMAWATI", kelas: "7A", status: "TIDAK LOLOS" },
-            { no: 3, nama: "CHIKA MAZZALUNA", kelas: "7A", status: "TIDAK LOLOS" },
-            { no: 4, nama: "HELGA BASUNJAYA WINENGKU", kelas: "7A", status: "TIDAK LOLOS" },
-            { no: 5, nama: "HOLI DATUS SYIFA", kelas: "7A", status: "TIDAK LOLOS" },
-            { no: 6, nama: "KEN OLIVIA FLORINA", kelas: "7A", status: "TIDAK LOLOS" },
-            { no: 7, nama: "MOHAMMAD TRISTAN ADIYAKSA", kelas: "7A", status: "TIDAK LOLOS" },
-            { no: 8, nama: "MUCHAMMAD PRIERTATIAN MUKTI", kelas: "7A", status: "TIDAK LOLOS" },
-            { no: 9, nama: "MUHAMMAD ZAID", kelas: "7A", status: "LOLOS" },
-            { no: 10, nama: "TRIVA FAUZIAH", kelas: "7A", status: "LOLOS" },
-            { no: 11, nama: "ZARA NADIA AKHYAR", kelas: "7A", status: "TIDAK LOLOS" },
-            { no: 12, nama: "OSENA GRACYA SULLA", kelas: "7A", status: "LOLOS" },
-            { no: 13, nama: "PUTRI HAPSARI", kelas: "7A", status: "TIDAK LOLOS" },
-            { no: 14, nama: "AZWA GARIF FAHEMA", kelas: "7B", status: "TIDAK LOLOS" },
-            { no: 15, nama: "ADINKA NAUVALIZA", kelas: "7B", status: "TIDAK LOLOS" },
-            { no: 16, nama: "ATIQAH INAS SETIAWAN", kelas: "7B", status: "TIDAK LOLOS" },
-            { no: 17, nama: "DWI WILLYARDI LAKSONO", kelas: "7B", status: "TIDAK LOLOS" },
-            { no: 18, nama: "GEMILANG ANDRIKO ISTIFARANDI", kelas: "7B", status: "TIDAK LOLOS" },
-            { no: 19, nama: "HANA AISYAKHIRA", kelas: "7B", status: "TIDAK LOLOS" },
-            { no: 20, nama: "KINETA YUKI KHAIRUNISA", kelas: "7B", status: "LOLOS" },
-            { no: 21, nama: "FARAH ANDINI AULIA", kelas: "7B", status: "TIDAK LOLOS" },
-            { no: 22, nama: "MOCH AZZAM RIZQI TIRTA ALHUDA", kelas: "7B", status: "LOLOS" },
-            { no: 23, nama: "MUHAMMAD RAIHAN RAMADHAN", kelas: "7B", status: "TIDAK LOLOS" },
-            { no: 24, nama: "MUHAMMAD ZIDAN AL - FAHREZI", kelas: "7B", status: "TIDAK LOLOS" },
-            { no: 25, nama: "WANDA APRILIYA PUTRI", kelas: "7B", status: "TIDAK LOLOS" },
-            { no: 26, nama: "ALIFKA CINTARA SISWANTI", kelas: "7C", status: "TIDAK LOLOS" },
-            { no: 27, nama: "APRILIANT DWI SYAHPUTRA", kelas: "7C", status: "TIDAK LOLOS" },
-            { no: 28, nama: "AYU ALIFAH WARDANI", kelas: "7C", status: "TIDAK LOLOS" },
-            { no: 29, nama: "DZAKIRA TALITHA ZAHRA", kelas: "7C", status: "LOLOS" },
-            { no: 30, nama: "EVELYN MEGA KAZAFANY", kelas: "7C", status: "LOLOS" },
-            { no: 31, nama: "FERNANDO BRYAN WIRO SUWONDO", kelas: "7C", status: "TIDAK LOLOS" },
-            { no: 32, nama: "IRSYAD FEBRIANSYAH HERMAWAN", kelas: "7C", status: "TIDAK LOLOS" },
-            { no: 33, nama: "KENZIE DWITYA ICHNIAWAN", kelas: "7C", status: "TIDAK LOLOS" },
-            { no: 34, nama: "KEVIN DANIAL WINARTO", kelas: "7C", status: "TIDAK LOLOS" },
-            { no: 35, nama: "MAIDA CARIDSA FATHIN ARDELIA", kelas: "7C", status: "TIDAK LOLOS" },
-            { no: 36, nama: "MEGGY PUTRI MAHESWARI", kelas: "7C", status: "TIDAK LOLOS" },
-            { no: 37, nama: "MOCHAMAD IQBAL RAMADAN", kelas: "7C", status: "TIDAK LOLOS" },
-            { no: 38, nama: "MUHAMMAD ABHIZHAR PUTRA ZEMBAR", kelas: "7C", status: "TIDAK LOLOS" },
-            { no: 39, nama: "MUHAMMAD DAFFA IBNU HAFIDZ", kelas: "7C", status: "LOLOS" },
-            { no: 40, nama: "NAUVELLOCA EQILONEA CAESTARO", kelas: "7C", status: "TIDAK LOLOS" },
-            { no: 41, nama: "SABRINA NAJWA FAGHIRA", kelas: "7C", status: "TIDAK LOLOS" },
-            { no: 42, nama: "TANIA SHINTA ARINDRA", kelas: "7C", status: "TIDAK LOLOS" },
-            { no: 43, nama: "YASMINE NIAR RAMADHANI", kelas: "7C", status: "TIDAK LOLOS" },
-            { no: 44, nama: "ACHMAD FAREL ADITYA", kelas: "7D", status: "LOLOS" },
-            { no: 45, nama: "ADINDA ROMADHONI", kelas: "7D", status: "TIDAK LOLOS" },
-            { no: 46, nama: "ALBI NIZAR AL KHALIF", kelas: "7D", status: "TIDAK LOLOS" },
-            { no: 47, nama: "ALFIZA PUTRI AZ-ZAHRA", kelas: "7D", status: "TIDAK LOLOS" },
-            { no: 48, nama: "ALHASYA GHIFANO ADELARD", kelas: "7D", status: "TIDAK LOLOS" },
-            { no: 49, nama: "ANDRA AULIA MUIZZADIEN", kelas: "7D", status: "TIDAK LOLOS" },
-            { no: 50, nama: "ANNISHA ZHAFIRA AZZAHRA PUTRI WIJAYA", kelas: "7D", status: "TIDAK LOLOS" },
-            { no: 51, nama: "AZZAM AL FARIZZY", kelas: "7D", status: "TIDAK LOLOS" },
-            { no: 52, nama: "CALISTA SESILLIA PUTRI", kelas: "7D", status: "TIDAK LOLOS" },
-            { no: 53, nama: "FLICTHA SAMARA ZOYA KANAZI", kelas: "7D", status: "LOLOS" },
-            { no: 54, nama: "FLOW KIDUNG SYARDHIKA", kelas: "7D", status: "TIDAK LOLOS" },
-            { no: 55, nama: "HAIKAL AZKA MAHMUDA", kelas: "7D", status: "TIDAK LOLOS" },
-            { no: 56, nama: "JAFFAEL RAFIF RHEYN", kelas: "7D", status: "TIDAK LOLOS" },
-            { no: 57, nama: "KANAYA YUNISHA RAMADHANI", kelas: "7D", status: "LOLOS" },
-            { no: 58, nama: "MOCH ASSYAROFFAH ROMDON", kelas: "7D", status: "TIDAK LOLOS" },
-            { no: 59, nama: "MUHAMMAD AHNAF SABILURROSYAD", kelas: "7D", status: "TIDAK LOLOS" },
-            { no: 60, nama: "MUHAMMAD ALWI RIFAI", kelas: "7D", status: "TIDAK LOLOS" },
-            { no: 61, nama: "MUHAMMAD NAUFAL AL GHIFARI", kelas: "7D", status: "TIDAK LOLOS" },
-            { no: 62, nama: "MUHAMMAD RIDHUWAN SUGIARTO", kelas: "7D", status: "TIDAK LOLOS" },
-            { no: 63, nama: "MUHAMMAD SYADIL AHLAN", kelas: "7D", status: "TIDAK LOLOS" },
-            { no: 64, nama: "NAYLA SAVA ZERLINDA", kelas: "7D", status: "TIDAK LOLOS" },
-            { no: 65, nama: "NEYLA ATHAYA MUFIDATUNISA", kelas: "7D", status: "TIDAK LOLOS" },
-            { no: 66, nama: "SABILATUL AZ ZAHRO", kelas: "7D", status: "LOLOS" },
-            { no: 67, nama: "SAFINAH ANNADHIROH", kelas: "7D", status: "TIDAK LOLOS" },
-            { no: 68, nama: "SUCIATI NING SUTRO", kelas: "7D", status: "TIDAK LOLOS" },
-            { no: 69, nama: "ZIDNA ILMA MAULIDA", kelas: "7D", status: "TIDAK LOLOS" },
-            { no: 70, nama: "AZZIRA FATASYA AYATUL HUSNA", kelas: "8A", status: "LOLOS" },
-            { no: 71, nama: "VINDY AQILLAH", kelas: "8A", status: "LOLOS" },
-            { no: 72, nama: "AHMAD GIBRAN FIRDAUS", kelas: "8B", status: "LOLOS" },
-            { no: 73, nama: "FARHUNNISA WAFI TSAQIFA", kelas: "8B", status: "LOLOS" },
-            { no: 74, nama: "KHOIRUNNISA PUTRANTI", kelas: "8B", status: "LOLOS" },
-            { no: 75, nama: "SYIFA AALIYAH SALSABILLAH", kelas: "8B", status: "LOLOS" },
-            { no: 76, nama: "ASHIILAH TSAMARAH CHOIRYMA", kelas: "8C", status: "LOLOS" },
-            { no: 77, nama: "CALLYSTA ALINE ARDIANSYAH", kelas: "8C", status: "TIDAK LOLOS" },
-            { no: 78, nama: "CUT KEUMALA APRILLIA", kelas: "8C", status: "TIDAK LOLOS" },
-            { no: 79, nama: "INAYATUR ROHMANIA", kelas: "8C", status: "TIDAK LOLOS" },
-            { no: 80, nama: "NARADJATI ADYAKUSUMAH", kelas: "8C", status: "TIDAK LOLOS" },
-            { no: 81, nama: "NATHANIA RENADINE PUTRI", kelas: "8C", status: "TIDAK LOLOS" },
-            { no: 82, nama: "NAYLA ALYATUS SA'ADA", kelas: "8C", status: "TIDAK LOLOS" },
-            { no: 83, nama: "NUGIE HAFIDZ WAHYU ALANZA", kelas: "8C", status: "TIDAK LOLOS" },
-            { no: 84, nama: "RIKI ALFIANO", kelas: "8C", status: "TIDAK LOLOS" },
-            { no: 85, nama: "LIHUAN ARIEF QURRAHMAN", kelas: "8D", status: "LOLOS" },
-            { no: 86, nama: "MOCH. VICKY ARVIANSYAH", kelas: "8D", status: "LOLOS" },
-            { no: 87, nama: "MUHAMMAD RAEHAN ALAMSYAH PUTRA ANANDA", kelas: "8D", status: "LOLOS" },
-            { no: 88, nama: "ONADIO SUKMA INDRA PRASASTA", kelas: "8D", status: "TIDAK LOLOS" }
+            { no: 1, nama: "ALYA RAHMAWATI", kelas: "7A", status: "TIDAK LOLOS" },
+            { no: 2, nama: "HOLI DATUS SYIFA", kelas: "7A", status: "TIDAK LOLOS" },
+            { no: 3, nama: "KEN OLIVIA FLORINA", kelas: "7A", status: "TIDAK LOLOS" },
+            { no: 4, nama: "MUHAMMAD ZAID", kelas: "7A", status: "LOLOS" },
+            { no: 5, nama: "TRIVA FAUZIAH", kelas: "7A", status: "LOLOS" },
+            { no: 6, nama: "OSENA GRACYA SULLA", kelas: "7A", status: "LOLOS" },
+            { no: 7, nama: "AZWA GARIF FAHEMA", kelas: "7B", status: "TIDAK LOLOS" },
+            { no: 8, nama: "ATIQAH INAS SETIAWAN", kelas: "7B", status: "TIDAK LOLOS" },
+            { no: 9, nama: "HANA AISYAKHIRA", kelas: "7B", status: "TIDAK LOLOS" },
+            { no: 10, nama: "KINETA YUKI KHAIRUNISA", kelas: "7B", status: "LOLOS" },
+            { no: 11, nama: "FARAH ANDINI AULIA", kelas: "7B", status: "TIDAK LOLOS" },
+            { no: 12, nama: "MOCH AZZAM RIZQI TIRTA ALHUDA", kelas: "7B", status: "LOLOS" },
+            { no: 13, nama: "MUHAMMAD RAIHAN RAMADHAN", kelas: "7B", status: "TIDAK LOLOS" },
+            { no: 14, nama: "MUHAMMAD ZIDAN AL - FAHREZI", kelas: "7B", status: "TIDAK LOLOS" },
+            { no: 15, nama: "ALIFKA CINTARA SISWANTI", kelas: "7C", status: "TIDAK LOLOS" },
+            { no: 16, nama: "AYU ALIFAH WARDANI", kelas: "7C", status: "TIDAK LOLOS" },
+            { no: 17, nama: "DZAKIRA TALITHA ZAHRA", kelas: "7C", status: "LOLOS" },
+            { no: 18, nama: "EVELYN MEGA KAZAFANY", kelas: "7C", status: "LOLOS" },
+            { no: 19, nama: "NAUVELLOCA EQILONEA CAESTARO", kelas: "7C", status: "TIDAK LOLOS" },
+            { no: 20, nama: "YASMINE NIAR RAMADHANI", kelas: "7C", status: "TIDAK LOLOS" },
+            { no: 21, nama: "ACHMAD FAREL ADITYA", kelas: "7D", status: "LOLOS" },
+            { no: 22, nama: "ADINDA ROMADHONI", kelas: "7D", status: "TIDAK LOLOS" },
+            { no: 23, nama: "ALFIZA PUTRI AZ-ZAHRA", kelas: "7D", status: "TIDAK LOLOS" },
+            { no: 24, nama: "ANDRA AULIA MUIZZADIEN", kelas: "7D", status: "TIDAK LOLOS" },
+            { no: 25, nama: "ANNISHA ZHAFIRA AZZAHRA PUTRI WIJAYA", kelas: "7D", status: "TIDAK LOLOS" },
+            { no: 26, nama: "FLICTHA SAMARA ZOYA KANAZI", kelas: "7D", status: "LOLOS" },
+            { no: 27, nama: "FLOW KIDUNG SYARDHIKA", kelas: "7D", status: "LOLOS" },
+            { no: 28, nama: "HAIKAL AZKA MAHMUDA", kelas: "7D", status: "LOLOS" },
+            { no: 29, nama: "MUHAMMAD RIDHUWAN SUGIARTO", kelas: "7D", status: "TIDAK LOLOS" },
+            { no: 30, nama: "NAYLA SAVA ZERLINDA", kelas: "7D", status: "TIDAK LOLOS" },
+            { no: 31, nama: "NEYLA ATHAYA MUFIDATUNISA", kelas: "7D", status: "TIDAK LOLOS" },
+            { no: 32, nama: "SABILATUL AZ ZAHRO", kelas: "7D", status: "LOLOS" },
+            { no: 33, nama: "SAFINAH ANNADHIROH", kelas: "7D", status: "TIDAK LOLOS" },
+            { no: 34, nama: "ZIDNA ILMA MAULIDA", kelas: "7D", status: "LOLOS" },
+            { no: 35, nama: "AZZIRA FATASYA AYATUL HUSNA", kelas: "8A", status: "LOLOS" },
+            { no: 36, nama: "VINDY AQILLAH", kelas: "8A", status: "LOLOS" },
+            { no: 37, nama: "AHMAD GIBRAN FIRDAUS", kelas: "8B", status: "LOLOS" },
+            { no: 38, nama: "FARHUNNISA WAFI TSAQIFA", kelas: "8B", status: "LOLOS" },
+            { no: 39, nama: "KHOIRUNNISA PUTRANTI", kelas: "8B", status: "LOLOS" },
+            { no: 40, nama: "SYIFA AALIYAH SALSABILLAH", kelas: "8B", status: "LOLOS" },
+            { no: 41, nama: "ASHIILAH TSAMARAH CHOIRYMA", kelas: "8C", status: "LOLOS" },
+            { no: 42, nama: "CALLYSTA ALINE ARDIANSYAH", kelas: "8C", status: "TIDAK LOLOS" },
+            { no: 43, nama: "CUT KEUMALA APRILLIA", kelas: "8C", status: "TIDAK LOLOS" },
+            { no: 44, nama: "NARADJATI ADYAKUSUMAH", kelas: "8C", status: "LOLOS" },
+            { no: 45, nama: "NATHANIA RENADINE PUTRI", kelas: "8C", status: "LOLOS" },
+            { no: 46, nama: "NAYLA ALYATUS SA'ADA", kelas: "8C", status: "LOLOS" },
+            { no: 47, nama: "NUGIE HAFIDZ WAHYU ALANZA", kelas: "8C", status: "LOLOS" },
+            { no: 48, nama: "RIKI ALFIANO", kelas: "8C", status: "LOLOS" },
+            { no: 49, nama: "LIHUAN ARIEF QURRAHMAN", kelas: "8D", status: "LOLOS" },
+            { no: 50, nama: "MUHAMMAD RAEHAN ALAMSYAH PUTRA ANANDA", kelas: "8D", status: "LOLOS" },
+            { no: 51, nama: "ONADIO SUKMA INDRA PRASASTA", kelas: "8D", status: "TIDAK LOLOS" },
+            { no: 52, nama: "STEFANNY SESYLIA PRARINDHA", kelas: "7A", status: "LOLOS" },
+            { no: 53, nama: "MUHAMMAD PRADIPTA DIAKSA", kelas: "8A", status: "LOLOS" },
+            { no: 54, nama: "CLARISTA MEINANDA N.R.", kelas: "7A", status: "TIDAK LOLOS" },
+            { no: 55, nama: "ADITYA FATHONI RAHMAN", kelas: "8A", status: "LOLOS" },
+            { no: 56, nama: "M. AZAMI HAIDAR .H", kelas: "8A", status: "LOLOS" },
+            { no: 57, nama: "DAVA ADITYA NATA NEGARA", kelas: "8A", status: "TIDAK LOLOS" },
+            { no: 58, nama: "AIRIN RIZKI ACBILCI", kelas: "7C", status: "TIDAK LOLOS" },
         ];
 
         const router = {
@@ -185,8 +162,8 @@
             navigate(route, params = {}) {
                 this.currentRoute = route;
                 this.params = params;
-                window.scrollTo({ top: 0, behavior: 'smooth' });
                 this.render();
+                try { window.scrollTo(0, 0); } catch (err) { /* ignore scroll errors */ }
             },
             render() {
                 const container = document.getElementById('app-container');
@@ -197,7 +174,7 @@
                 } else if (this.currentRoute === 'mpk_verify') {
                     container.innerHTML = renderMpkVerifyView();
                 } else if (this.currentRoute === 'mpk_result') {
-                    container.innerHTML = renderMpkResultView();
+                    container.innerHTML = renderMpkResultView(this.params);
                 } else if (this.currentRoute === 'osis_check') {
                     container.innerHTML = renderOsisCheckView();
                 } else if (this.currentRoute === 'osis_result') {
@@ -235,7 +212,7 @@
                                 </div>
                                 <h3 class="font-poppins text-2xl font-bold text-slate-900 mb-3">Hasil Seleksi MPK</h3>
                                 <p class="text-slate-500 text-sm leading-relaxed mb-8 max-w-xs mx-auto font-quicksand">
-                                    Majelis Perwakilan Kelas SMP Negeri 28 Malang Masa Bakti 2026-2027.
+                                    Pengumuman hasil seleksi Majelis Perwakilan Kelas SMP Negeri 28 Malang.
                                 </p>
                             </div>
                             <button class="w-full bg-emerald-600 hover:bg-emerald-700 active:scale-95 text-white font-semibold py-3.5 px-4 rounded-2xl transition-all flex items-center justify-center gap-2 shadow-lg shadow-emerald-600/20 text-sm font-poppins">
@@ -252,7 +229,7 @@
                                 </div>
                                 <h3 class="font-poppins text-2xl font-bold text-slate-900 mb-3">Hasil Seleksi OSIS</h3>
                                 <p class="text-slate-500 text-sm leading-relaxed mb-8 max-w-xs mx-auto font-quicksand">
-                                    Pengurus Organisasi Siswa Intra Sekolah SMP Negeri 28 Malang Masa Bakti 2026-2027.
+                                    Pengumuman hasil Tes dan Wawancara Seleksi OSIS SMP Negeri 28 Malang Masa Bakti 2026-2027.
                                 </p>
                             </div>
                             <button class="w-full bg-blue-600 hover:bg-blue-700 active:scale-95 text-white font-semibold py-3.5 px-4 rounded-2xl transition-all flex items-center justify-center gap-2 shadow-lg shadow-blue-600/20 text-sm font-poppins">
@@ -265,18 +242,34 @@
         }
 
         function renderMpkVerifyView() {
+            const sortedMpk = [...mpkData].sort((a, b) => a.nama.localeCompare(b.nama));
+            const optionsHtml = sortedMpk.map((item, index) =>
+                `<option value="${index}">${item.nama}</option>`
+            ).join('');
+
             return `
                 <div class="animate-fade-in max-w-md mx-auto">
                     <div class="glass-card p-8 sm:p-10 rounded-3xl shadow-2xl shadow-slate-200/60 border border-white">
                         <div class="text-center mb-8">
                             <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-4 text-2xl shadow-inner">
-                                <i class="fa-solid fa-shield-halved"></i>
+                                <i class="fa-solid fa-users-rectangle"></i>
                             </div>
-                            <h3 class="font-poppins text-2xl font-bold text-slate-900">Verifikasi MPK</h3>
-                            <p class="text-xs sm:text-sm text-slate-500 mt-2 font-quicksand">Masukkan kode verifikasi resmi untuk melihat daftar pengurus MPK.</p>
+                            <h3 class="font-poppins text-2xl font-bold text-slate-900">Cek Hasil Seleksi MPK</h3>
+                            <p class="text-xs sm:text-sm text-slate-500 mt-2 font-quicksand">
+                                Pilih nama peserta dan masukkan kode verifikasi untuk melihat hasil seleksi secara pribadi.
+                            </p>
                         </div>
 
-                        <form onsubmit="handleMpkVerify(event)" class="space-y-5">
+                        <form onsubmit="handleMpkSubmit(event)" class="space-y-5">
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-2 font-poppins">Nama Peserta</label>
+                                <select id="mpk-select" required
+                                    class="w-full px-4 py-4 rounded-2xl bg-slate-50/80 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:bg-white text-slate-800 text-sm font-medium transition-all shadow-inner font-quicksand">
+                                    <option value="">Pilih nama peserta...</option>
+                                    ${optionsHtml}
+                                </select>
+                            </div>
+
                             <div>
                                 <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-2 font-poppins">Kode Verifikasi</label>
                                 <input type="password" id="mpk-code" placeholder="Masukkan kode verifikasi..." required
@@ -285,9 +278,9 @@
                             </div>
 
                             <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 active:scale-95 text-white font-semibold py-4 rounded-2xl transition-all shadow-lg shadow-emerald-600/25 text-sm flex items-center justify-center gap-2 font-poppins">
-                                <i class="fa-solid fa-lock-open"></i> Lanjutkan Pengumuman
+                                <i class="fa-solid fa-magnifying-glass"></i> Lihat Hasil Seleksi
                             </button>
-                            
+
                             <button type="button" onclick="router.navigate('home')" class="w-full bg-slate-100 hover:bg-slate-200 text-slate-600 font-semibold py-3.5 rounded-2xl transition-all text-xs font-poppins">
                                 Kembali ke Beranda
                             </button>
@@ -297,79 +290,84 @@
             `;
         }
 
-        function handleMpkVerify(e) {
+        function handleMpkSubmit(e) {
             e.preventDefault();
+            const selectIndex = document.getElementById('mpk-select').value;
             const code = document.getElementById('mpk-code').value.trim();
             const errorEl = document.getElementById('mpk-error');
-            if (code === 'MPK28') {
-                router.navigate('mpk_result');
-            } else {
-                errorEl.textContent = 'Kode verifikasi salah! Silakan coba lagi.';
+
+            if (selectIndex === "") {
+                errorEl.textContent = 'Silakan pilih nama peserta terlebih dahulu.';
                 errorEl.classList.remove('hidden');
+                return;
             }
+
+            if (code !== 'MPK28') {
+                errorEl.textContent = 'Kode verifikasi salah! Silakan periksa kembali kode yang dimasukkan.';
+                errorEl.classList.remove('hidden');
+                return;
+            }
+
+            const sortedMpk = [...mpkData].sort((a, b) => a.nama.localeCompare(b.nama));
+            const selectedCandidate = sortedMpk[Number(selectIndex)];
+            router.navigate('mpk_result', { candidate: selectedCandidate });
         }
 
-        function renderMpkResultView() {
-            let rowsHtml = '';
-            mpkData.forEach((item) => {
-                let badgeColor = 'bg-teal-50 text-teal-800 border-teal-200';
-                if (item.jabatan === 'Ketua') badgeColor = 'bg-emerald-50 text-emerald-800 border-emerald-300';
-                else if (item.jabatan === 'Wakil') badgeColor = 'bg-teal-50 text-teal-800 border-teal-300';
-                else if (item.jabatan === 'Sekretaris' || item.jabatan === 'Bendahara') badgeColor = 'bg-blue-50 text-blue-800 border-blue-200';
-                else if (item.jabatan === 'Anggota') badgeColor = 'bg-violet-50 text-violet-800 border-violet-200';
+        function renderMpkResultView(params) {
+            const candidate = params.candidate;
+            if (!candidate) {
+                router.navigate('mpk_verify');
+                return '';
+            }
 
-                rowsHtml += `
-                    <tr class="hover:bg-slate-50/80 transition-colors border-b border-slate-100/80 text-xs sm:text-sm font-quicksand">
-                        <td class="px-3 sm:px-6 py-4 text-center font-bold text-slate-700 font-poppins">${item.no}</td>
-                        <td class="px-3 sm:px-6 py-4 font-bold text-slate-900 uppercase font-poppins">${item.nama}</td>
-                        <td class="px-3 sm:px-6 py-4 text-center">
-                            <span class="inline-block text-[11px] sm:text-xs font-bold px-3 py-1.5 rounded-full border ${badgeColor} w-36 text-center shadow-xs">${item.jabatan}</span>
-                        </td>
-                    </tr>
-                `;
-            });
+            const isLolos = candidate.status === 'LOLOS';
 
             return `
-                <div class="animate-fade-in max-w-3xl mx-auto space-y-6">
-                    <div class="glass-card p-6 sm:p-10 rounded-3xl shadow-xl shadow-slate-200/60 border border-white text-center relative overflow-hidden">
-                        <div class="absolute top-0 right-0 w-48 h-48 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none"></div>
-                        
-                        <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-5 text-2xl shadow-lg">
-                            <i class="fa-solid fa-award"></i>
-                        </div>
-                        
-                        <div class="inline-flex items-center gap-2 bg-emerald-50 text-emerald-700 text-xs font-bold px-4 py-1.5 rounded-full mb-4 border border-emerald-200 font-poppins">
-                            <i class="fa-solid fa-circle-check"></i> PENGUMUMAN RESMI MPK
+                <div class="animate-fade-in max-w-lg mx-auto">
+                    <div class="glass-card p-6 sm:p-10 rounded-3xl shadow-2xl shadow-slate-200/60 border border-white">
+                        <div class="text-center mb-6">
+                            <div class="inline-flex items-center gap-2 ${isLolos ? 'bg-emerald-100 text-emerald-800 border border-emerald-200' : 'bg-rose-100 text-rose-800 border border-rose-200'} text-xs font-bold px-4 py-2 rounded-full shadow-sm font-poppins">
+                                <i class="fa-solid ${isLolos ? 'fa-circle-check text-emerald-600' : 'fa-circle-exclamation text-rose-600'} text-sm"></i>
+                                ${isLolos ? 'SELAMAT, DINYATAKAN LOLOS' : 'HASIL SELEKSI MPK'}
+                            </div>
                         </div>
 
-                        <h2 class="font-poppins text-2xl sm:text-3xl font-extrabold text-slate-900 mb-6 leading-tight">Pengurus MPK SMPN 28 Malang</h2>
-                        
-                        <div class="space-y-3 text-slate-700 text-sm sm:text-base leading-relaxed font-quicksand max-w-2xl mx-auto text-center mb-8">
-                            <p class="font-bold text-slate-900">Terima kasih kepada seluruh peserta yang telah berpartisipasi dengan penuh semangat.</p>
-                            <p class="font-normal text-slate-600">Berikut adalah daftar nama MPK SMP Negeri 28 Malang, masa bakti 2026 - 2027:</p>
+                        <div class="bg-white/95 border border-slate-100 p-5 sm:p-6 rounded-2xl mb-8 text-center shadow-sm">
+                            <div class="text-xs font-bold text-emerald-600 uppercase tracking-wider mb-2 font-poppins">Nama Peserta</div>
+                            <div class="font-poppins text-lg sm:text-xl font-extrabold text-slate-900">${candidate.nama}</div>
                         </div>
 
-                        <!-- Table -->
-                        <div class="overflow-x-auto rounded-2xl border border-slate-200/80 shadow-sm bg-white">
-                            <table class="w-full text-left border-collapse">
-                                <thead>
-                                    <tr class="bg-slate-100/90 text-slate-700 uppercase text-[11px] sm:text-xs tracking-wider font-poppins border-b border-slate-200">
-                                        <th class="px-3 sm:px-6 py-3.5 text-center w-16">No</th>
-                                        <th class="px-3 sm:px-6 py-3.5">Nama Lengkap</th>
-                                        <th class="px-3 sm:px-6 py-3.5 text-center w-40">Jabatan</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    ${rowsHtml}
-                                </tbody>
-                            </table>
+                        <div class="flex justify-center mb-8">
+                            <div class="inline-flex items-center gap-3 ${isLolos ? 'bg-emerald-50 text-emerald-800 border-emerald-200' : 'bg-rose-50 text-rose-800 border-rose-200'} border px-6 py-3 rounded-2xl shadow-sm font-poppins">
+                                <span class="text-sm font-bold uppercase tracking-wider">Status</span>
+                                <span class="text-base sm:text-lg font-extrabold">${candidate.status}</span>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="pt-2 text-center">
-                        <button onclick="router.navigate('home')" class="bg-slate-900 hover:bg-slate-800 text-white font-semibold py-4 px-8 rounded-2xl transition-all shadow-xl shadow-slate-900/10 text-sm inline-flex items-center gap-2 active:scale-95 font-poppins">
-                            <i class="fa-solid fa-arrow-left"></i> Kembali ke Menu Utama
-                        </button>
+                        ${isLolos ? `
+                            <div class="bg-emerald-50/50 border border-emerald-200/70 border-l-4 border-l-emerald-500 p-6 rounded-2xl shadow-sm mb-8 space-y-4 font-quicksand text-slate-700 text-sm sm:text-base text-justify">
+                                <h3 class="font-poppins font-bold text-xl sm:text-2xl text-emerald-800 text-center mb-2">Selamat, ${candidate.nama}! 🎉</h3>
+                                <p class="leading-relaxed text-center">Kamu dinyatakan <b class="text-emerald-700 font-extrabold">LOLOS</b> dalam seleksi <b>Majelis Perwakilan Kelas (MPK) SMP Negeri 28 Malang</b>.</p>
+                                <p class="leading-relaxed text-center">Selamat atas pencapaian ini. Semoga kepercayaan yang diberikan menjadi awal untuk belajar bertanggung jawab, menyampaikan aspirasi, bekerja sama, dan memberikan kontribusi positif bagi sekolah.</p>
+                                <p class="leading-relaxed text-emerald-900 font-medium text-center">Sampai bertemu pada tahap selanjutnya. Persiapkan diri untuk <b>lapor diri pada Jumat</b> sesuai arahan panitia.</p>
+                            </div>
+                        ` : `
+                            <div class="bg-rose-50/40 border border-rose-200/60 border-l-4 border-l-rose-500 p-6 rounded-2xl shadow-sm mb-8 space-y-4 font-quicksand text-slate-700 text-sm sm:text-base text-justify">
+                                <h3 class="font-poppins font-bold text-xl sm:text-2xl text-rose-800 text-center mb-2">Terima kasih, ${candidate.nama}.</h3>
+                                <p class="leading-relaxed text-center">Terima kasih atas antusiasme, keberanian, dan kesungguhanmu dalam mengikuti proses seleksi <b>MPK SMP Negeri 28 Malang</b>.</p>
+                                <p class="leading-relaxed text-center">Hasil seleksi kali ini memang belum sesuai dengan harapan, namun satu hasil tidak menentukan seluruh perjalananmu. Pengalaman ini tetap menjadi bagian berharga untuk belajar, berkembang, dan mengenal potensi diri.</p>
+                                <p class="leading-relaxed font-semibold text-slate-700 text-center">Tetap semangat, terus aktif, dan jangan berhenti mengambil kesempatan untuk berkarya serta memberikan kontribusi terbaik bagi sekolah. 🌱</p>
+                            </div>
+                        `}
+
+                        <div class="flex flex-col sm:flex-row gap-3">
+                            <button onclick="router.navigate('mpk_verify')" class="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold py-3.5 px-4 rounded-2xl transition-all text-xs sm:text-sm flex items-center justify-center gap-2 active:scale-95 shadow-sm font-poppins">
+                                <i class="fa-solid fa-rotate-left"></i> Cek Nama Lain
+                            </button>
+                            <button onclick="router.navigate('home')" class="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3.5 px-4 rounded-2xl transition-all shadow-lg shadow-emerald-600/25 text-xs sm:text-sm flex items-center justify-center gap-2 active:scale-95 font-poppins">
+                                <i class="fa-solid fa-house"></i> Beranda Utama
+                            </button>
+                        </div>
                     </div>
                 </div>
             `;
@@ -390,12 +388,26 @@
                                 <i class="fa-solid fa-id-card"></i>
                             </div>
                             <h3 class="font-poppins text-2xl font-bold text-slate-900">Cek Hasil Seleksi OSIS</h3>
-                            <p class="text-xs sm:text-sm text-slate-500 mt-2 font-quicksand">Pilih nama kamu dan masukkan kode verifikasi resmi untuk melihat hasil.</p>
+                            <p class="text-xs sm:text-sm text-slate-500 mt-2 font-quicksand">
+                                Pengumuman hasil <b>Tes dan Wawancara Seleksi OSIS</b>.
+                            </p>
+                            <div class="mt-5 bg-blue-50 border border-blue-200 text-blue-800 rounded-2xl p-4 text-left text-xs sm:text-sm font-quicksand leading-relaxed">
+                                <div class="flex items-start gap-2">
+                                    <i class="fa-solid fa-circle-info mt-0.5 text-blue-600"></i>
+                                    <p>
+                                        <b>Khusus peserta yang mengikuti kedua tahap seleksi.</b><br>
+                                        Silakan pilih nama peserta pada daftar untuk melihat hasil seleksi.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
 
                         <form onsubmit="handleOsisSubmit(event)" class="space-y-5">
                             <div>
                                 <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-2 font-poppins">Nama Peserta</label>
+                                <p class="text-[11px] text-slate-500 mb-2 font-quicksand">
+                                    Daftar nama di bawah ini khusus peserta yang mengikuti <b>Tes + Wawancara</b>.
+                                </p>
                                 <select id="osis-select" required
                                     class="w-full px-4 py-4 rounded-2xl bg-slate-50/80 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white text-slate-800 text-sm font-medium transition-all shadow-inner font-quicksand">
                                     ${optionsHtml}
@@ -480,7 +492,7 @@
                         ${isLolos ? `
                             <div class="bg-emerald-50/40 border border-emerald-200/60 border-l-4 border-l-emerald-500 p-6 rounded-2xl shadow-sm mb-8 space-y-4 font-quicksand text-slate-700 text-sm sm:text-base text-justify">
                                 <h3 class="font-poppins font-bold text-xl sm:text-2xl text-emerald-800 text-left mb-2">Selamat, kamu terpilih! 🎉</h3>
-                                <p class="leading-relaxed">Kamu berhasil melewati rangkaian seleksi OSIS dan dinyatakan <b class="text-emerald-700 font-extrabold">LOLOS</b> sebagai calon pengurus OSIS Masa Bakti 2026/2027.</p>
+                                <p class="leading-relaxed">Kamu telah mengikuti <b>Tes dan Wawancara Seleksi OSIS</b> dan dinyatakan <b class="text-emerald-700 font-extrabold">LOLOS</b> sebagai calon pengurus OSIS Masa Bakti 2026/2027.</p>
                                 <p class="leading-relaxed">Perjalanan baru saja dimulai.</p>
                                 <p class="leading-relaxed text-emerald-900 font-medium">Mari belajar memimpin, berkolaborasi, berani menyampaikan ide, dan bersama-sama membuat SMP Negeri 28 Malang menjadi tempat yang semakin seru untuk tumbuh dan berkarya.</p>
                             </div>
@@ -507,10 +519,27 @@
             `;
         }
 
-        // Initialize App on load
-        window.onload = function() {
-            router.navigate('home');
-        };
+        // Initialize App as soon as the DOM is ready
+        function initApp() {
+            try {
+                router.render();
+            } catch (err) {
+                console.error('Gagal merender aplikasi:', err);
+                const container = document.getElementById('app-container');
+                if (container) {
+                    container.innerHTML = `
+                        <div class="glass-card max-w-2xl mx-auto p-8 rounded-3xl text-center shadow-xl">
+                            <h2 class="font-poppins text-2xl font-bold text-slate-900 mb-3">Portal Pengumuman Seleksi</h2>
+                            <p class="font-quicksand text-slate-600">Silakan muat ulang halaman untuk mencoba kembali.</p>
+                        </div>`;
+                }
+            }
+        }
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initApp);
+        } else {
+            initApp();
+        }
     </script>
 </body>
 </html>
